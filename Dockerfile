@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/powershell:ubuntu-bionic
 
-LABEL authors="DigitalGaz@hotmail.com"
+LABEL authors="digitalGaz@hotmail.com"
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get update -y -q && apt-get install -y unzip && apt-get clean
 
