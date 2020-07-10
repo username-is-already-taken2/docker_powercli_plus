@@ -11,5 +11,6 @@ WORKDIR /root
 SHELL [ "pwsh", "-command" ]
 RUN Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 RUN Install-Module VMware.PowerCLI,PowerNSX,AWSPowerShell.Netcore
+RUN Set-PowerCLIConfiguration -InvalidCertificateAction:Ignore -ParticipateInCeip:$false -Scope:ALLUSERS -Confirm:$false
 
 CMD ["/usr/bin/pwsh"]
